@@ -1,0 +1,111 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	line-height: 1;
+}
+
+.activeClass {
+	display: block;
+}
+
+.hideClass {
+	display: none;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.main {
+	height: 100vh;
+	width: 100vw;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.formBox {
+	background-color: #ededed;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.formTitle {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.formLine {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-right: 15px;
+}
+
+.formGroup {
+	margin-bottom: 20px;
+	width: calc(50% - 15px);
+}
+
+.formLabel {
+	font-size: 14px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.formInput {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #fff;
+	font-size: 14px;
+	border: 1px solid #d9d9d9;
+}
+
+.formInput:focus {
+	outline: none;
+	border: 1px solid #7c7c7c;
+}
+
+.formButton {
+	width: 100%;
+	background-color: #2497AE;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	padding: 15px 0;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.has-error,
+.has-error:focus {
+	border: 1px solid #f00;
+}
+
+.has-success {
+	border: 1px solid #0f0;
+}
+
+.serverAnswer {
+	margin-top: 30px;
+}

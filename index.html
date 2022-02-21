@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тестовое задание</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+	<div id="app">
+		<div class="main">
+			<h1 class="formTitle">Тестовое задание</h1>
+			<div class="formBox">
+				<form @submit.prevent="submitForm">
+					<div class="formLine">
+						<div class="formGroup">
+							<label for="name" class="formLabel">Ваше имя:</label>
+							<input id="name" type="text" v-model="name" :class="['formInput', isNameValid()]" required/>
+						</div>
+						<div class="formGroup">
+							<label for="email" class="formLabel">Ваш email:</label>
+							<input id="email" type="email" v-model="email" required :class="['formInput', isEmailValid()]"/>
+						</div>
+					</div>
+					<div class="formLine">
+						<div class="formGroup">
+							<label for="phone" class="formLabel">Ваш телефон:</label>
+							<input ref="input" id="phone" type="text" v-model="phone" class="formInput" required v-maska="'+7 (###) ###-##-##'"/>
+						</div>
+						<div class="formGroup">
+							<label for="price" class="formLabel">Укажите цену:</label>
+							<input id="price" type="text" v-model="price" required :class="['formInput', isPriceValid()]"/>
+						</div>
+					</div>
+					<button :class="[name.length > 1 ? 'activeClass formButton' : 'hideClass formButton']" type="submit">Отправить</button>
+				</form>
+			</div>
+			<div :class="[response ? activeClass : 'hideClass']">
+				<h3>Ответ с сервера:</h3>
+				<pre>{{ response }}</pre>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/vue.js"></script>
+	<script src="js/axios.js"></script>
+	<script src="js/maska.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
